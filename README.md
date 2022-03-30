@@ -70,8 +70,8 @@ REMOVE @_key IN levenshtein_distance_record
 ```
 1. git clone git@github.com:/psprateek7/LevenshtheinDistanceCalculator.git
 2. cd LevenshtheinDistanceCalculator
-4. npm install
-5. npm run start
+3. npm install
+4. npm run start
 ```
 
 
