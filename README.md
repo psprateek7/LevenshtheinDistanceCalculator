@@ -28,7 +28,7 @@ Deletes the specific collection.
 takes two "string" params and returns the calculated "Levenshthein distance"   
 
 
-## `Used querries`
+## `Used queries`
  
 ### getLevenshteinRecords
 ```
