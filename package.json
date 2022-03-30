@@ -2,6 +2,7 @@
   "name": "levenshtein-distance-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://psprateek7.github.io/LevenshtheinDistanceCalculator",
   "dependencies": {
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
@@ -50,6 +51,7 @@
     ]
   },
   "devDependencies": {
+    "prettier": "^2.5.1",
     "react-app-rewired": "^2.2.1"
   }
 }

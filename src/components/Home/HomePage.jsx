@@ -1,22 +1,27 @@
-import React from 'react';
-import { Header } from '../common/Header.jsx';
+import React, { useEffect } from "react"
+import { Header } from "../common/Header.jsx"
 import { Container } from "@mui/material"
-import { makeStyles } from "@mui/styles"
-import { CollectionTable } from '../Table/TableContainer.jsx';
+import { CollectionTable } from "../Table/TableContainer.jsx"
+import { InputBox } from "../common/InputBox.jsx"
+import { checkIfCollectionExists, createCollection } from "../../utils/services/macrometaCollectionsOperation.js"
+import { STRING_UTILS } from "../../utils/constants/stringUtils"
 
-const useStyles = makeStyles({
-    root: {
-        backgroundColor: "#F1F2F4",
-        minHeight: "100vh",
-        padding: "0 !important",
-    },
-})
-export const Home=()=>{
-    const classes = useStyles()
+export const Home = () => {
+    const createCollectionIfNotExists = async () => {
+        const response = await checkIfCollectionExists(STRING_UTILS.MACROMETA_COLLECTION_NAME)
+        if (!response) {
+            await createCollection(STRING_UTILS.MACROMETA_COLLECTION_NAME)
+        }
+    }
+    useEffect(() => {
+        createCollectionIfNotExists()
+    }, [])
+
     return (
-        <Container className={classes.root} maxWidth={false}>
-        <Header/>
-        <CollectionTable/>
+        <Container maxWidth={false}>
+            <Header />
+            <InputBox />
+            <CollectionTable />
         </Container>
     )
 }

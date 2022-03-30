@@ -1,12 +1,28 @@
-# Getting Started with Create React App
+# Levenshthein Distance Calculator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project lets user calculate the Levenshthein distance between two strings.
+It uses Macrometa jsC8 driver to connect with macrometa GDN.
+and utilises "collection" to store and retrieve the generated Levenshthein distance.
 
-## Available Scripts
+Collection is created directly on the GDN.
+## Available Services
 
 In the project directory, you can run:
 
-### `npm start`
+### `createCollection`
+Creates a new collection with the provided name..
+
+### `checkIfCollectionExists`
+Checks wether the existing collection is already present using the "collection name".
+
+### `getCollectionDetails`
+Returns the collection details that is already created in the GDN.
+
+### `deleteCollection`
+Deletes the specific collection.
+
+### `calculateLevenshteinDistance`
+takes two "string" params and returns the calculated "Levenshthein distance"   
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -30,6 +46,8 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ### `npm run eject`
+//prerequsites--node/npn
+//how to run
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
