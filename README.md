@@ -57,15 +57,24 @@ REMOVE @_key IN levenshtein_distance_record
 ```
 
 ### Prerequisites
+```
  Node
+ ```
 
 ### for local development
-npm install  
-npm run start
+```
+1. git clone git@github.com:/psprateek7/LevenshtheinDistanceCalculator.git
+2. cd LevenshtheinDistanceCalculator
+3. git fetch
+4. npm install
+5. npm run start
+```
+
 
 ### Deploy on GH Pages:
-npm run predeploy  
+```
+npm run build  
 npm run deploy
-
+```
 
 
