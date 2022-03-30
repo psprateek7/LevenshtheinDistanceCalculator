@@ -56,14 +56,14 @@ REMOVE @_key IN levenshtein_distance_record
 
 ```
 
-###Prerequisites
+### Prerequisites
  Node
 
-###for local development
+### for local development
 npm install
 npm run start
 
-###Deploy on GH Pages:
+### Deploy on GH Pages:
 npm run predeploy
 npm run deploy
 
