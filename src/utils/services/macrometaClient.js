@@ -1,11 +1,11 @@
 import jsC8 from "jsc8"
 import appConfig from "../configs/appConfig"
 
-let jsc8Client
+let MacrometaClient
 const { macrometa_url, macrometa_api_key, macrometa_fabric } = appConfig
 
-const initJsc8Client = () => {
-    jsc8Client = new jsC8({
+const initMacrometaClient = () => {
+    MacrometaClient = new jsC8({
         url: macrometa_url,
         apiKey: macrometa_api_key,
         fabricName: macrometa_fabric,
@@ -13,13 +13,12 @@ const initJsc8Client = () => {
 }
 
 //returns the singletion instance of jsC8
-
-const getJsc8Client = () => {
-    if (!jsc8Client) {
-        initJsc8Client()
+const getMacrometaClient = () => {
+    if (!MacrometaClient) {
+        initMacrometaClient()
     }
 
-    return jsc8Client
+    return MacrometaClient
 }
 
-export { getJsc8Client }
+export { getMacrometaClient }

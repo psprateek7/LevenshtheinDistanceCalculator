@@ -1,8 +1,8 @@
-import { getJsc8Client } from "./macrometaClient"
+import { getMacrometaClient } from "./macrometaClient"
 
 const checkIfCollectionExists = async (collectionName) => {
     try {
-        const jsC8 = getJsc8Client()
+        const jsC8 = getMacrometaClient()
         const response = await jsC8.hasCollection(collectionName)
         return response
     } catch (error) {
@@ -12,7 +12,7 @@ const checkIfCollectionExists = async (collectionName) => {
 
 const getCollectionDetails = async (collectionName) => {
     try {
-        const jsC8 = getJsc8Client()
+        const jsC8 = getMacrometaClient()
         const response = await jsC8.getCollection(collectionName)
         return response
     } catch (error) {
@@ -22,7 +22,7 @@ const getCollectionDetails = async (collectionName) => {
 
 const deleteCollection = async (collectionName) => {
     try {
-        const jsC8 = getJsc8Client()
+        const jsC8 = getMacrometaClient()
         const response = await jsC8.deleteCollection(collectionName)
         return response
     } catch (error) {
@@ -32,7 +32,7 @@ const deleteCollection = async (collectionName) => {
 
 const createCollection = async (collectionName) => {
     try {
-        const jsC8 = getJsc8Client()
+        const jsC8 = getMacrometaClient()
         const response = await jsC8.createCollection(collectionName)
         return response
     } catch (error) {
@@ -43,7 +43,7 @@ const createCollection = async (collectionName) => {
 const calculateLevenshteinDistance = async (query, params = {}) => {
     let response = []
     try {
-        const jsC8 = getJsc8Client()
+        const jsC8 = getMacrometaClient()
         response = await jsC8.executeQuery(query, params)
         return response
     } catch (error) {
@@ -54,7 +54,7 @@ const calculateLevenshteinDistance = async (query, params = {}) => {
 const executeMacrometaRestQl = async (restqlName, bindVars = {}) => {
     let response = []
     try {
-        const jsC8 = getJsc8Client()
+        const jsC8 = getMacrometaClient()
         response = await jsC8.executeRestql(restqlName, bindVars)
         return response
     } catch (error) {

@@ -46,7 +46,12 @@ RETURN {
 
 ### insertLevenshteinRecord
 ```
-INSERT {string1:@string1, string2:@string2, levenshtein_distance:LEVENSHTEIN_DISTANCE(@string1, @string2) } INTO levenshtein_distance_record
+INSERT {
+    string1:@string1, 
+    string2:@string2, 
+    levenshtein_distance:LEVENSHTEIN_DISTANCE(@string1, @string2) 
+} 
+INTO levenshtein_distance_record
 
 ```
 
@@ -61,11 +66,10 @@ REMOVE @_key IN levenshtein_distance_record
  Node
  ```
 
-### for local development
+### For local development
 ```
 1. git clone git@github.com:/psprateek7/LevenshtheinDistanceCalculator.git
 2. cd LevenshtheinDistanceCalculator
-3. git fetch
 4. npm install
 5. npm run start
 ```
@@ -73,8 +77,8 @@ REMOVE @_key IN levenshtein_distance_record
 
 ### Deploy on GH Pages:
 ```
-npm run build  
-npm run deploy
+1. npm run build  
+2. npm run deploy
 ```
 
 
