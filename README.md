@@ -3,7 +3,6 @@
 ### Demo: https://psprateek7.github.io/LevenshtheinDistanceCalculator/
 
 
-
 This project lets user calculate the Levenshthein distance between two strings.
 
 The Levenshtein distance is a string metric for measuring difference between two sequences. Informally, the Levenshtein distance between two words is the minimum number of single-character edits (i.e. insertions, deletions or substitutions) required to change one word into the other.
@@ -29,7 +28,7 @@ Deletes the specific collection.
 takes two "string" params and returns the calculated "Levenshthein distance"   
 
 
-## `Used querry workers`
+## `Used querries`
  
 ### getLevenshteinRecords
 ```
@@ -57,8 +56,16 @@ REMOVE @_key IN levenshtein_distance_record
 
 ```
 
+###Prerequisites
+ Node
 
+###for local development
+npm install
+npm run start
 
+###Deploy on GH Pages:
+npm run predeploy
+npm run deploy
 
 
 
